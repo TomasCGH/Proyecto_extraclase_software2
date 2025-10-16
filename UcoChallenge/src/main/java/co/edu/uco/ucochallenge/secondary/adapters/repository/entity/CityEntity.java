@@ -15,6 +15,8 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "Ciudad")
 public class CityEntity {
+	
+	
 
 	@Id
 	@Column(name = "id")
