@@ -1,5 +1,8 @@
 # 🏠 Victus Residencias  
-![Logo Victus Residencias](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/logo.png)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/logo.png" alt="Logo Victus Residencias" width="400"/>
+</p>
 
 ## 📘 Presentación General
 
@@ -20,26 +23,30 @@ El proyecto implementa una **arquitectura distribuida basada en microservicios**
 ---
 
 ## 🧩 Modelo de Clases
-📎 **Ubicación:** `imagenes/modelo-clases.png`  
-![Modelo de Clases](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/modeloClases.png)
 
-Representa las entidades principales del dominio:  
-`ConjuntoResidencial`, `Residente`, `Reserva`, `Administrador`, `ZonaComún`, y sus relaciones.  
-Define la base estructural del sistema y sus asociaciones.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/modeloClases.png" alt="Modelo de Clases" width="800"/>
+</p>
+
+Representa las entidades principales del dominio: `ConjuntoResidencial`, `Residente`, `Reserva`, `Administrador`, `ZonaComún`, y sus relaciones. Define la base estructural del sistema y sus asociaciones.
 
 ---
 
 ## 🧮 Modelo MER (Entidad–Relación)
-📎 **Ubicación:** `imagenes/modelo-mer.png`  
-![Modelo MER](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/modeloMER.png)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/modeloMER.png" alt="Modelo MER" width="800"/>
+</p>
 
 Este modelo refleja el esquema físico de la base de datos en PostgreSQL, definiendo llaves primarias, foráneas y relaciones 1:N y N:M entre las tablas del sistema.
 
 ---
 
 ## 🔄 Modelo de Actividades
-📎 **Ubicación:** `imagenes/modelo-actividades.png`  
-![Modelo de Actividades](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/DiagramaActividades.png)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/DiagramaActividades.png" alt="Modelo de Actividades" width="800"/>
+</p>
 
 El diagrama de actividades representa el flujo de negocio para los procesos clave:
 - Registro de conjuntos residenciales
@@ -50,16 +57,20 @@ El diagrama de actividades representa el flujo de negocio para los procesos clav
 ---
 
 ## 🧱 Modelo de Objetos
-📎 **Ubicación:** `imagenes/modelo-objetos.png`  
-![Modelo de Objetos](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/ModeloObjetos.png)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/ModeloObjetos.png" alt="Modelo de Objetos" width="800"/>
+</p>
 
 Describe instancias específicas de clases y cómo interactúan en tiempo de ejecución dentro de un escenario concreto de gestión residencial.
 
 ---
 
 ## ⚙️ Modelo de Estados
-📎 **Ubicación:** `imagenes/modelo-estados.png`  
-![Modelo de Estados](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/DiagramaEstados.png)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/DiagramaEstados.png" alt="Modelo de Estados" width="800"/>
+</p>
 
 Muestra los estados posibles de una **Reserva**:
 - Pendiente  
@@ -73,12 +84,16 @@ Muestra los estados posibles de una **Reserva**:
 ## ☁️ Modelo de Despliegue
 
 ### 🧭 Arquitectura de referencia
-📎 **Ubicación:** `imagenes/modelo-despliegue.png`  
-![Modelo de Despliegue](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/Arquitectura.png)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/Arquitectura.png" alt="Arquitectura" width="900"/>
+</p>
 
 ### 🧭 Arquetipo de referencia
-📎 **Ubicación:** `imagenes/arquetipo.png`  
-![Arquetipo](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/Arquetipo.png)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/Arquetipo.png" alt="Arquetipo" width="900"/>
+</p>
 
 ### 🧭 Arquitectura Distribuida
 Victus Residencias adopta una **arquitectura distribuida con microservicios**, donde cada módulo (Usuarios, Reservas, Administración) se despliega en contenedores independientes dentro del entorno **Azure App Service**.
@@ -92,21 +107,31 @@ Victus Residencias adopta una **arquitectura distribuida con microservicios**, d
 
 ### 🧩 Bloques de Construcción Desarrollados
 
-**Backend:**  
-![Backend Components](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/bloqConstDesaBack.png)
+**Backend:**
 
-**Frontend:**  
-![Frontend Components](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/bloqConstDesaFront.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/bloqConstDesaBack.png" alt="Backend Components" width="800"/>
+</p>
+
+**Frontend:**
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/bloqConstDesaFront.png" alt="Frontend Components" width="800"/>
+</p>
 
 ---
 
 ## 🧮 Modelo de Paquetes
-📎 **Ubicación:** `imagenes/modelo-paquetes.png`  
-![Modelo de Paquetes](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/ModeloPaquetes.png)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/ModeloPaquetes.png" alt="Modelo de Paquetes" width="800"/>
+</p>
 
 ### 📄 Documentación del Modelo de Paquetes
-📎 **Ubicación:** `imagenes/documentacion-paquetes.png`  
-![Documentación de Paquetes](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/DocPaquetes.png)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/DocPaquetes.png" alt="Documentación de Paquetes" width="800"/>
+</p>
 
 El modelo de paquetes organiza la aplicación siguiendo una arquitectura **Hexagonal (Ports & Adapters)**, garantizando separación clara entre capas:
 - **Domain:** lógica de negocio
@@ -116,12 +141,16 @@ El modelo de paquetes organiza la aplicación siguiendo una arquitectura **Hexag
 ---
 
 ## ⚙️ Modelo de Componentes
-📎 **Ubicación:** `imagenes/modelo-componentes.png`  
-![Modelo de Componentes](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/ModeloComponentes.png)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/ModeloComponentes.png" alt="Modelo de Componentes" width="800"/>
+</p>
 
 ### 📄 Documentación de Componentes
-📎 **Ubicación:** `imagenes/documentacion-componentes.png`  
-![Documentación de Componentes](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/DocComponentes.png)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/DocComponentes.png" alt="Documentación de Componentes" width="800"/>
+</p>
 
 Se identifican:
 - Componentes **externos**: Java 21, Spring Boot, PostgreSQL JDBC.  
@@ -130,11 +159,12 @@ Se identifican:
 ---
 
 ## 🔁 Modelo de Secuencia
-📎 **Ubicación:** `imagenes/modelo-secuencia.png`  
-![Modelo de Secuencia](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/ModeloSecuencias.png)
 
-El flujo describe la interacción entre los actores del sistema para el caso de uso:
-**Registrar Conjunto Residencial**
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/ModeloSecuencias.png" alt="Modelo de Secuencia" width="900"/>
+</p>
+
+El flujo describe la interacción entre los actores del sistema para el caso de uso: **Registrar Conjunto Residencial**
 
 1. El administrador ingresa los datos (nombre, dirección, ciudad, administrador).  
 2. El frontend React envía un `POST /api/conjuntos-residenciales`.  
@@ -143,22 +173,28 @@ El flujo describe la interacción entre los actores del sistema para el caso de 
 5. Se retorna una respuesta HTTP `200 OK`.
 
 ### 📄 Documentación del Modelo de Secuencia
-📎 **Ubicación:** `imagenes/documentacion-secuencia.png`  
-![Documentación de Secuencia](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/DocSecuencia.png)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/DocSecuencia.png" alt="Documentación de Secuencia" width="800"/>
+</p>
 
 ---
 
 ## ⚖️ Trade-Off
-📎 **Ubicación:** `imagenes/trade-off.png`  
-![Trade-Off](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/trade-Off.png)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/trade-Off.png" alt="Trade-Off" width="800"/>
+</p>
 
 Este modelo compara las decisiones arquitectónicas en términos de **seguridad, rendimiento, disponibilidad y mantenibilidad**, priorizando la integración en Azure y la modularidad del código.
 
 ---
 
 ## 🧠 Mapa de Empatía
-📎 **Ubicación:** `imagenes/mapa-empatia.png`  
-![Mapa de Empatía](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/MapaEmpatia.png)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/MapaEmpatia.png" alt="Mapa de Empatía" width="800"/>
+</p>
 
 El mapa identifica las percepciones, frustraciones y necesidades de los **residentes**, **administradores** y **personal de portería**, garantizando una experiencia centrada en el usuario.
 
@@ -166,32 +202,97 @@ El mapa identifica las percepciones, frustraciones y necesidades de los **reside
 
 ## 🎯 Escenarios de Calidad
 
-| Atributo de Calidad | Característica | Identificador | Nombre | Tipo | Objetivo | Descripción | Criterio de Éxito | Fuente del Estímulo | Estímulo | Ambiente | Artefacto | Respuesta | Medida de la Respuesta | Cumplió | Nombre Táctica | Descripción Estrategia |
-|----------------------|----------------|----------------|---------|------|------------|----------------|-------------------|----------------------|-----------|------------|-------------|------------|------------------------|-----------|------------------|------------------------|
-| Seguridad | Arquitectura de Confianza Distribuida | SEG-CAL_0001 | Control de Acceso Basado en Roles | Preventivo | Garantizar que solo los usuarios tengan los privilegios apropiados para acceder a funciones administrativas críticas. | El sistema debe validar continuamente que los usuarios tengan los privilegios necesarios para acceder a funciones administrativas como la gestión de conjuntos residenciales y usuarios. | Solo usuarios con roles apropiados pueden ejecutar acciones administrativas críticas. | Usuario autenticado del sistema. | Solicitud de acceso a función crítica. | Sistema operativo con usuarios de diferentes niveles de privilegio. | Módulo de autorización y gestión de roles. | Concesión o denegación de acceso según privilegios. | Tiempo de validación < 200 ms; tasa de error = 0%. | No | Uso de JWT + OAuth 2.0 | Permite control de acceso basado en roles utilizando tokens como moneda de intercambio. |
-| Seguridad | Gobernanza de Cumplimiento Integral | SEG-CAL_0002 | Validación Continua de Cumplimiento Regulatorio | Detectivo | Asegurar el cumplimiento continuo de regulaciones y normas de protección de datos. | El sistema debe monitorear el cumplimiento de GDPR, CCPA y normativas locales, generando alertas ante desviaciones. | Cumplimiento regulatorio ≥ 100 %. | Auditor interno automatizado. | Verificación periódica de cumplimiento. | Sistema operativo con procesamiento continuo de datos personales. | Motor de cumplimiento regulatorio. | Validación automática y aplicación de correcciones. | Frecuencia de verificación automática cada hora. | No | Bitácoras de Auditoría | Mantiene trazabilidad de permisos y acciones críticas para auditorías. |
-| Seguridad | Paradigma de Privacidad por Diseño | SEG-CAL_0003 | Protección de Información Personal de Residentes | Preventivo | Garantizar que los datos de los residentes estén cifrados y protegidos contra accesos no autorizados. | El sistema debe cifrar toda la información sensible en tránsito y en reposo. | Los intentos de acceso no autorizados se registran y bloquean. | Atacante externo o interno. | Intento de acceso sin credenciales válidas. | Sistema con múltiples usuarios activos. | Base de datos y módulo de autenticación. | El sistema niega acceso, registra intento y notifica al administrador. | Tiempo de detección ≤ 2 s; tasa de bloqueos 100 %. | No | Cifrado de Tránsito | Cifra la conversación entre el usuario y el servidor durante el intercambio de información. |
-| Seguridad | Resiliencia ante Amenazas Adaptativas | SEG-CAL_0004 | Gestión Segura de Sesiones de Usuario | Detectivo | Proteger las sesiones activas ante comportamientos sospechosos. | El sistema detecta actividades anómalas en sesiones activas. | Sesiones comprometidas se terminan y notifican. | Sesión comprometida o intento de suplantación. | Comportamiento inusual en sesión. | Sistema con múltiples sesiones concurrentes activas. | Sistema de gestión de sesiones y detección de anomalías. | Terminación forzosa de sesión y reautenticación. | Tiempo de detección < 10 s; tasa de falsos positivos < 2 %. | No | Detección de Anomalías | Usa API Key y patrones de comportamiento para mitigar accesos maliciosos. |
-| Seguridad | Resiliencia ante Amenazas Adaptativas | SEG-CAL_0005 | Identificación Temprana de Amenazas Emergentes | Proactivo | Detectar amenazas nuevas y responder automáticamente. | El sistema debe usar machine learning para identificar patrones de ataque. | Sistema mitiga amenaza antes de impacto. | Algoritmo de aprendizaje automático. | Análisis de patrones de tráfico malicioso. | Sistema bajo condiciones normales de tráfico. | Motor de análisis de seguridad. | Ajuste automático de políticas de seguridad. | Precisión ≥ 85 %. | No | Web Application Firewall | Servicio API para detectar y bloquear patrones de ataque antes del impacto. |
-| Disponibilidad | Estabilidad del Servicio en Alta Demanda | DISP-CAL_0013 | Estabilidad bajo Carga Máxima de Reservas | Preventivo | Garantizar rendimiento y respuesta bajo alta demanda. | El sistema mantiene tiempos de respuesta aceptables durante carga simultánea. | 99,5 % de solicitudes procesadas sin error. | Múltiples residentes. | Solicitudes simultáneas de reserva. | Sistema en operación normal. | Módulo del sistema de reservas. | Actualización en tiempo real. | Latencia < 4 s; disponibilidad del 100 %. | No | Gestión de Rendimiento | Balanceo de carga y caché para reducir latencia. |
-| Disponibilidad | Resiliencia ante Interrupciones Críticas | DISP-CAL_0014 | Resiliencia de la Sesión ante Inestabilidad de Red | Detectivo | Asegurar continuidad del servicio ante fallos de red. | El sistema mantiene sesión del usuario activa durante pérdidas de conexión. | Reanudación automática. | Usuario final. | Desconexión breve (5–10 s). | Sistema de gestión de sesiones. | Reintento automático de conexión. | Reanudación en < 30 s. | No | Tolerancia a Fallos | Tokens persistentes y reconexión automática transparente. |
-| Disponibilidad | Resiliencia ante Interrupciones Críticas | DISP-CAL_0015 | Gestión de Agotamiento del Pool de Conexiones | Reactivo | Evitar bloqueos por agotamiento de recursos. | El sistema libera y valida conexiones inactivas. | Sin bloqueos HTTP 503. | Múltiples solicitudes concurrentes. | Saturación de conexiones. | Sistema en producción. | Gestor del pool de conexiones. | Liberación automática. | Tiempo de recuperación ≤ 5 s. | No | Tolerancia a Fallos | Pool de conexiones validado y autocorregido. |
-| Disponibilidad | Estabilidad del Servicio en Alta Demanda | DISP-CAL_0016 | Disponibilidad durante Eliminación Forzada de Entidad | Preventivo | Mantener integridad durante operaciones críticas. | El sistema garantiza consistencia transaccional. | No se pierden datos ni registros. | Administrador. | Eliminación de entidad. | Sistema en producción. | Módulo de gestión de viviendas. | Operación completa sin fallos. | Duración < 5 s. | No | Concurrencia | Transacciones con índices y bloqueos controlados. |
-| Disponibilidad | Recuperación Oportuna del Servicio | DISP-CAL_0017 | Impacto del Mantenimiento Programado | Reactivo | Minimizar tiempo fuera de servicio. | Mantenimiento controlado y notificado. | Disponibilidad ≥ 99 %. | Equipo de operaciones. | Mantenimiento planificado. | Sistema en mantenimiento. | Infraestructura de despliegue. | Restablecimiento automático. | Tiempo total de parada < 15 min. | No | Mantenimiento con Mínima Interrupción | Despliegue automatizado y validación post-mantenimiento. |
+> **Nota:** Para mejor visualización de la tabla completa, consulta el [documento completo de escenarios](https://shorturl.at/IEAS5)
+
+### Seguridad
+
+#### SEG-CAL_0001: Control de Acceso Basado en Roles
+- **Tipo:** Preventivo
+- **Objetivo:** Garantizar que solo los usuarios tengan los privilegios apropiados para acceder a funciones administrativas críticas
+- **Táctica:** Uso de JWT + OAuth 2.0
+- **Criterio de éxito:** Solo usuarios con roles apropiados pueden ejecutar acciones administrativas críticas
+- **Medida:** Tiempo de validación < 200 ms; tasa de error = 0%
+
+#### SEG-CAL_0002: Validación Continua de Cumplimiento Regulatorio
+- **Tipo:** Detectivo
+- **Objetivo:** Asegurar el cumplimiento continuo de regulaciones y normas de protección de datos
+- **Táctica:** Bitácoras de Auditoría
+- **Criterio de éxito:** Cumplimiento regulatorio ≥ 100%
+- **Medida:** Frecuencia de verificación automática cada hora
+
+#### SEG-CAL_0003: Protección de Información Personal de Residentes
+- **Tipo:** Preventivo
+- **Objetivo:** Garantizar que los datos de los residentes estén cifrados y protegidos contra accesos no autorizados
+- **Táctica:** Cifrado de Tránsito
+- **Criterio de éxito:** Los intentos de acceso no autorizados se registran y bloquean
+- **Medida:** Tiempo de detección ≤ 2 s; tasa de bloqueos 100%
+
+#### SEG-CAL_0004: Gestión Segura de Sesiones de Usuario
+- **Tipo:** Detectivo
+- **Objetivo:** Proteger las sesiones activas ante comportamientos sospechosos
+- **Táctica:** Detección de Anomalías
+- **Criterio de éxito:** Sesiones comprometidas se terminan y notifican
+- **Medida:** Tiempo de detección < 10 s; tasa de falsos positivos < 2%
+
+#### SEG-CAL_0005: Identificación Temprana de Amenazas Emergentes
+- **Tipo:** Proactivo
+- **Objetivo:** Detectar amenazas nuevas y responder automáticamente
+- **Táctica:** Web Application Firewall
+- **Criterio de éxito:** Sistema mitiga amenaza antes de impacto
+- **Medida:** Precisión ≥ 85%
+
+### Disponibilidad
+
+#### DISP-CAL_0013: Estabilidad bajo Carga Máxima de Reservas
+- **Tipo:** Preventivo
+- **Objetivo:** Garantizar rendimiento y respuesta bajo alta demanda
+- **Táctica:** Gestión de Rendimiento
+- **Criterio de éxito:** 99,5% de solicitudes procesadas sin error
+- **Medida:** Latencia < 4 s; disponibilidad del 100%
+
+#### DISP-CAL_0014: Resiliencia de la Sesión ante Inestabilidad de Red
+- **Tipo:** Detectivo
+- **Objetivo:** Asegurar continuidad del servicio ante fallos de red
+- **Táctica:** Tolerancia a Fallos
+- **Criterio de éxito:** Reanudación automática
+- **Medida:** Reanudación en < 30 s
+
+#### DISP-CAL_0015: Gestión de Agotamiento del Pool de Conexiones
+- **Tipo:** Reactivo
+- **Objetivo:** Evitar bloqueos por agotamiento de recursos
+- **Táctica:** Tolerancia a Fallos
+- **Criterio de éxito:** Sin bloqueos HTTP 503
+- **Medida:** Tiempo de recuperación ≤ 5 s
+
+#### DISP-CAL_0016: Disponibilidad durante Eliminación Forzada de Entidad
+- **Tipo:** Preventivo
+- **Objetivo:** Mantener integridad durante operaciones críticas
+- **Táctica:** Concurrencia
+- **Criterio de éxito:** No se pierden datos ni registros
+- **Medida:** Duración < 5 s
+
+#### DISP-CAL_0017: Impacto del Mantenimiento Programado
+- **Tipo:** Reactivo
+- **Objetivo:** Minimizar tiempo fuera de servicio
+- **Táctica:** Mantenimiento con Mínima Interrupción
+- **Criterio de éxito:** Disponibilidad ≥ 99%
+- **Medida:** Tiempo total de parada < 15 min
 
 ---
 
 ## 🧾 Autoría
 
 **Universidad Católica de Oriente (UCO)**  
-Proyecto desarrollado por estudiantes del programa **Ingeniería de Sistemas**  
-**Año:** 2025  
-**Arquitectura:** Microservicios distribuidos en Azure  
-**Lenguaje principal:** Java 21  
-**Framework:** Spring Boot 3.5.x  
-**Base de datos:** PostgreSQL  
-**Frontend:** React + Vite  
-**Infraestructura:** Azure Cloud Services  
+Proyecto desarrollado por estudiantes del programa **Ingeniería de Sistemas**
+
+**Especificaciones Técnicas:**
+- **Año:** 2025  
+- **Arquitectura:** Microservicios distribuidos en Azure  
+- **Lenguaje principal:** Java 21  
+- **Framework:** Spring Boot 3.5.x  
+- **Base de datos:** PostgreSQL  
+- **Frontend:** React + Vite  
+- **Infraestructura:** Azure Cloud Services  
 
 ---
 
@@ -199,3 +300,9 @@ Proyecto desarrollado por estudiantes del programa **Ingeniería de Sistemas**
 
 Para más información sobre el proyecto, visita el repositorio oficial:  
 🔗 [GitHub - UcoChallengeVictus](https://github.com/andrias01/UcoChallengeVictus)
+
+---
+
+<p align="center">
+  <sub>Desarrollado con ❤️ por estudiantes de la Universidad Católica de Oriente</sub>
+</p>
