@@ -1,8 +1,6 @@
 # 🏠 Victus Residencias  
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/logo.png" alt="Logo Victus Residencias" width="400"/>
-</p>
+![Logo Victus Residencias](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/logo.png)
 
 ## 📘 Presentación General
 
@@ -24,9 +22,7 @@ El proyecto implementa una **arquitectura distribuida basada en microservicios**
 
 ## 🧩 Modelo de Clases
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/modeloClases.png" alt="Modelo de Clases" width="800"/>
-</p>
+![Modelo de Clases](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/modeloClases.png)
 
 Representa las entidades principales del dominio: `ConjuntoResidencial`, `Residente`, `Reserva`, `Administrador`, `ZonaComún`, y sus relaciones. Define la base estructural del sistema y sus asociaciones.
 
@@ -34,9 +30,7 @@ Representa las entidades principales del dominio: `ConjuntoResidencial`, `Reside
 
 ## 🧮 Modelo MER (Entidad–Relación)
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/modeloMER.png" alt="Modelo MER" width="800"/>
-</p>
+![Modelo MER](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/modeloMER.png)
 
 Este modelo refleja el esquema físico de la base de datos en PostgreSQL, definiendo llaves primarias, foráneas y relaciones 1:N y N:M entre las tablas del sistema.
 
@@ -44,9 +38,7 @@ Este modelo refleja el esquema físico de la base de datos en PostgreSQL, defini
 
 ## 🔄 Modelo de Actividades
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/DiagramaActividades.png" alt="Modelo de Actividades" width="800"/>
-</p>
+![Modelo de Actividades](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/DiagramaActividades.png)
 
 El diagrama de actividades representa el flujo de negocio para los procesos clave:
 - Registro de conjuntos residenciales
@@ -58,9 +50,7 @@ El diagrama de actividades representa el flujo de negocio para los procesos clav
 
 ## 🧱 Modelo de Objetos
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/ModeloObjetos.png" alt="Modelo de Objetos" width="800"/>
-</p>
+![Modelo de Objetos](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/ModeloObjetos.png)
 
 Describe instancias específicas de clases y cómo interactúan en tiempo de ejecución dentro de un escenario concreto de gestión residencial.
 
@@ -68,9 +58,7 @@ Describe instancias específicas de clases y cómo interactúan en tiempo de eje
 
 ## ⚙️ Modelo de Estados
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/DiagramaEstados.png" alt="Modelo de Estados" width="800"/>
-</p>
+![Modelo de Estados](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/DiagramaEstados.png)
 
 Muestra los estados posibles de una **Reserva**:
 - Pendiente  
@@ -85,15 +73,11 @@ Muestra los estados posibles de una **Reserva**:
 
 ### 🧭 Arquitectura de referencia
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/Arquitectura.png" alt="Arquitectura" width="900"/>
-</p>
+![Arquitectura](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/Arquitectura.png)
 
 ### 🧭 Arquetipo de referencia
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/Arquetipo.png" alt="Arquetipo" width="900"/>
-</p>
+![Arquetipo](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/Arquetipo.png)
 
 ### 🧭 Arquitectura Distribuida
 Victus Residencias adopta una **arquitectura distribuida con microservicios**, donde cada módulo (Usuarios, Reservas, Administración) se despliega en contenedores independientes dentro del entorno **Azure App Service**.
@@ -109,29 +93,21 @@ Victus Residencias adopta una **arquitectura distribuida con microservicios**, d
 
 **Backend:**
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/bloqConstDesaBack.png" alt="Backend Components" width="800"/>
-</p>
+![Backend Components](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/bloqConstDesaBack.png)
 
 **Frontend:**
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/bloqConstDesaFront.png" alt="Frontend Components" width="800"/>
-</p>
+![Frontend Components](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/bloqConstDesaFront.png)
 
 ---
 
 ## 🧮 Modelo de Paquetes
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/ModeloPaquetes.png" alt="Modelo de Paquetes" width="800"/>
-</p>
+![Modelo de Paquetes](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/ModeloPaquetes.png)
 
 ### 📄 Documentación del Modelo de Paquetes
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/DocPaquetes.png" alt="Documentación de Paquetes" width="800"/>
-</p>
+![Documentación de Paquetes](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/DocPaquetes.png)
 
 El modelo de paquetes organiza la aplicación siguiendo una arquitectura **Hexagonal (Ports & Adapters)**, garantizando separación clara entre capas:
 - **Domain:** lógica de negocio
@@ -142,15 +118,11 @@ El modelo de paquetes organiza la aplicación siguiendo una arquitectura **Hexag
 
 ## ⚙️ Modelo de Componentes
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/ModeloComponentes.png" alt="Modelo de Componentes" width="800"/>
-</p>
+![Modelo de Componentes](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/ModeloComponentes.png)
 
 ### 📄 Documentación de Componentes
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/DocComponentes.png" alt="Documentación de Componentes" width="800"/>
-</p>
+![Documentación de Componentes](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/DocComponentes.png)
 
 Se identifican:
 - Componentes **externos**: Java 21, Spring Boot, PostgreSQL JDBC.  
@@ -160,9 +132,7 @@ Se identifican:
 
 ## 🔁 Modelo de Secuencia
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/ModeloSecuencias.png" alt="Modelo de Secuencia" width="900"/>
-</p>
+![Modelo de Secuencia](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/ModeloSecuencias.png)
 
 El flujo describe la interacción entre los actores del sistema para el caso de uso: **Registrar Conjunto Residencial**
 
@@ -174,17 +144,13 @@ El flujo describe la interacción entre los actores del sistema para el caso de 
 
 ### 📄 Documentación del Modelo de Secuencia
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/DocSecuencia.png" alt="Documentación de Secuencia" width="800"/>
-</p>
+![Documentación de Secuencia](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/DocSecuencia.png)
 
 ---
 
 ## ⚖️ Trade-Off
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/trade-Off.png" alt="Trade-Off" width="800"/>
-</p>
+![Trade-Off](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/trade-Off.png)
 
 Este modelo compara las decisiones arquitectónicas en términos de **seguridad, rendimiento, disponibilidad y mantenibilidad**, priorizando la integración en Azure y la modularidad del código.
 
@@ -192,17 +158,13 @@ Este modelo compara las decisiones arquitectónicas en términos de **seguridad,
 
 ## 🧠 Mapa de Empatía
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/MapaEmpatia.png" alt="Mapa de Empatía" width="800"/>
-</p>
+![Mapa de Empatía](https://raw.githubusercontent.com/andrias01/UcoChallengeVictus/master/imagenes/MapaEmpatia.png)
 
 El mapa identifica las percepciones, frustraciones y necesidades de los **residentes**, **administradores** y **personal de portería**, garantizando una experiencia centrada en el usuario.
 
 ---
 
 ## 🎯 Escenarios de Calidad
-
-> **Nota:** Para mejor visualización de la tabla completa, consulta el [documento completo de escenarios](https://shorturl.at/IEAS5)
 
 ### Seguridad
 
@@ -300,9 +262,3 @@ Proyecto desarrollado por estudiantes del programa **Ingeniería de Sistemas**
 
 Para más información sobre el proyecto, visita el repositorio oficial:  
 🔗 [GitHub - UcoChallengeVictus](https://github.com/andrias01/UcoChallengeVictus)
-
----
-
-<p align="center">
-  <sub>Desarrollado con ❤️ por estudiantes de la Universidad Católica de Oriente</sub>
-</p>
