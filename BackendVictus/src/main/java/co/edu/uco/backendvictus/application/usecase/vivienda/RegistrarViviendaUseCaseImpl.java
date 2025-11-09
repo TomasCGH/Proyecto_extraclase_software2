@@ -93,16 +93,6 @@ public class RegistrarViviendaUseCaseImpl implements RegistrarViviendaUseCase {
     }
 
     private Mono<ViviendaResponse> replicateAndNotify(final Vivienda vivienda, final String traceId) {
-        final Map<String, Object> payload = new java.util.LinkedHashMap<>();
-        payload.put("id", vivienda.getId().toString());
-        payload.put("numero", vivienda.getNumero());
-        payload.put("tipo", vivienda.getTipo());
-        payload.put("estado", vivienda.getEstado());
-        payload.put("conjuntoId", vivienda.getConjuntoId().toString());
-        payload.put("timestamp", Instant.now().toString());
-        if (vivienda.getMetadatos() != null) {
-            payload.put("metadatos", vivienda.getMetadatos());
-        }
         final Map<String, Object> payload = Map.of(
                 "id", vivienda.getId().toString(),
                 "numero", vivienda.getNumero(),
