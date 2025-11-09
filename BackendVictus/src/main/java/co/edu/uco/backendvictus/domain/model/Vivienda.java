@@ -6,6 +6,9 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Optional;
 import java.util.UUID;
 
 import co.edu.uco.backendvictus.crosscutting.exception.DomainException;
@@ -19,8 +22,8 @@ public final class Vivienda {
     private final String numero;
     private final String tipo;
     private final String estado;
-    private static final Set<String> ESTADOS_VALIDOS = Set.of("OCUPADA", "NO_OCUPADA");
 
+    private static final Set<String> ESTADOS_VALIDOS = Set.of("OCUPADA", "NO_OCUPADA");
     private final UUID conjuntoId;
     private final Map<String, Object> metadatos;
 
@@ -43,7 +46,7 @@ public final class Vivienda {
         final String validatedNumero = requireText(numero, "El numero de la vivienda es obligatorio");
         final String validatedTipo = requireText(tipo, "El tipo de la vivienda es obligatorio");
         final String validatedEstado = validateEstado(estado);
-
+        final String validatedEstado = requireText(estado, "El estado de la vivienda es obligatorio");
         return new Vivienda(validatedId, validatedNumero, validatedTipo, validatedEstado, validatedConjuntoId,
                 metadatos);
     }

@@ -1,6 +1,7 @@
 package co.edu.uco.backendvictus.infrastructure.secondary.entity;
 
 import java.time.OffsetDateTime;
+import java.util.Map;
 import java.util.UUID;
 
 import org.springframework.data.annotation.Id;
@@ -17,8 +18,7 @@ public class ViviendaEntity {
     private String estado;
     @Column("conjunto_id")
     private UUID conjuntoId;
-    @Column("metadatos")
-    private String metadatos;
+    private Map<String, Object> metadatos;
     @Column("created_at")
     private OffsetDateTime createdAt;
     @Column("updated_at")
@@ -64,11 +64,11 @@ public class ViviendaEntity {
         this.conjuntoId = conjuntoId;
     }
 
-    public String getMetadatos() {
+    public Map<String, Object> getMetadatos() {
         return metadatos;
     }
 
-    public void setMetadatos(final String metadatos) {
+    public void setMetadatos(final Map<String, Object> metadatos) {
         this.metadatos = metadatos;
     }
 

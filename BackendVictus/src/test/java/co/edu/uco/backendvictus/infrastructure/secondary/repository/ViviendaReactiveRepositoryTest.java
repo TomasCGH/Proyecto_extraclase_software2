@@ -47,9 +47,8 @@ class ViviendaReactiveRepositoryTest {
         entity.setId(UUID.randomUUID());
         entity.setNumero("A-101");
         entity.setTipo("APARTAMENTO");
-        entity.setEstado("OCUPADA");
+        entity.setEstado("ACTIVA");
         entity.setConjuntoId(UUID.randomUUID());
-        entity.setMetadatos("{\"torre\":\"1\"}");
 
         StepVerifier.create(repository.save(entity))
                 .expectNextMatches(saved -> saved.getNumero().equals("A-101"))

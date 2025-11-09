@@ -48,7 +48,7 @@ class ViviendaControllerTest {
     @Test
     void shouldCreateVivienda() {
         final UUID viviendaId = UUID.randomUUID();
-        final ViviendaResponse response = new ViviendaResponse(viviendaId, "A-203", "APARTAMENTO", "NO_OCUPADA",
+        final ViviendaResponse response = new ViviendaResponse(viviendaId, "A-203", "APARTAMENTO", "ACTIVA",
                 UUID.randomUUID(), Map.of("torre", "3"));
 
         when(registrarViviendaUseCase.execute(any(ViviendaCreateRequest.class), any(UUID.class), any()))
@@ -61,7 +61,7 @@ class ViviendaControllerTest {
                 .bodyValue("{" +
                         "\"numero\":\"A-203\"," +
                         "\"tipo\":\"APARTAMENTO\"," +
-                        "\"estado\":\"NO_OCUPADA\"," +
+                        "\"estado\":\"ACTIVA\"," +
                         "\"conjuntoId\":\"" + UUID.randomUUID() + "\"," +
                         "\"metadatos\":{\"torre\":\"3\"}}")
                 .exchange()
@@ -72,7 +72,7 @@ class ViviendaControllerTest {
     @Test
     void shouldListByConjunto() {
         when(listarViviendasPorConjuntoUseCase.execute(any(UUID.class)))
-                .thenReturn(Flux.just(new ViviendaResponse(UUID.randomUUID(), "B-101", "CASA", "OCUPADA",
+                .thenReturn(Flux.just(new ViviendaResponse(UUID.randomUUID(), "B-101", "CASA", "ACTIVA",
                         UUID.randomUUID(), null)));
 
         webTestClient.get()
