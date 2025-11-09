@@ -350,3 +350,61 @@ Proyecto desarrollado por estudiantes del programa **Ingeniería de Sistemas**
 
 Para más información sobre el proyecto, visita el repositorio oficial:  
 🔗 [GitHub - UcoChallengeVictus](https://github.com/andrias01/UcoChallengeVictus)
+---
+
+## 🚀 Registrar Vivienda
+
+La API de **BackendVictus** ahora expone un flujo totalmente reactivo para registrar, consultar y eliminar viviendas dentro de un conjunto residencial.
+
+### ✅ Prerrequisitos locales
+
+Configura las siguientes variables de entorno antes de ejecutar la aplicación:
+
+```bash
+export SPRING_R2DBC_URL="r2dbc:postgresql://localhost:5432/victus"
+export SPRING_R2DBC_USERNAME="postgres"
+export SPRING_R2DBC_PASSWORD="postgres"
+export AZURE_SERVICEBUS_CONNECTION_STRING="Endpoint=sb://mi-servicebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=***"
+export AZURE_COSMOS_ENDPOINT="https://mi-cosmos-account.documents.azure.com:443/"
+export AZURE_COSMOS_KEY="***"
+export AZURE_COSMOS_DATABASE="victus"
+export AZURE_COSMOS_CONTAINER="viviendas"
+export AZURE_WEBPUBSUB_CONNECTION_STRING="Endpoint=https://mi-webpubsub.webpubsub.azure.com;AccessKey=***;Version=1.0;"
+export AZURE_WEBPUBSUB_HUB="viviendas"
+export AZURE_SERVICEBUS_TOPIC_NAME="vivienda"
+```
+
+### ▶️ Ejecutar la aplicación
+
+```bash
+./mvnw clean package
+./mvnw spring-boot:run
+```
+
+### 🔐 JWT de ejemplo (ROLE_ADMIN)
+
+```
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwMDIwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAiLCJhdWQiOiJhcGktdmljdHVzIiwiYXBwbGljYXRpb25JZCI6ImJhY2tlbmQtdmljdHVzIiwic2NvcGUiOlsiYXBpIl0sInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTcwMDAwMDAwMCwiZXhwIjoxOTAwMDAwMDAwfQ.SAMPLE_SIGNATURE
+```
+
+> ⚠️ El `sub` debe ser un UUID válido presente en la tabla `usuario_rol` con rol `ADMIN`.
+
+### 🧪 Probar creación de vivienda
+
+> Los estados permitidos son `OCUPADA` y `NO_OCUPADA`.
+
+```bash
+curl -X POST "http://localhost:8080/v1/viviendas" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer <TOKEN_JWT_ADMIN>" \
+  -H "X-Trace-Id: demo-trace" \
+  -d '{
+    "numero": "A-203",
+    "tipo": "APARTAMENTO",
+    "estado": "NO_OCUPADA",
+    "conjuntoId": "c8a8e7c1-2d53-4f0a-8b9e-3b9b6c9b2b77",
+    "metadatos": {"torre": "3", "piso": 2}
+  }'
+```
+
+La respuesta exitosa (`201 Created`) incluye la ubicación del recurso, el `traceId` propagado y desencadena la replicación hacia **Azure Cosmos DB**, la publicación del evento `vivienda.creada` en **Azure Service Bus** y la notificación en **Azure Web PubSub**.
