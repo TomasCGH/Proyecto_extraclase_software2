@@ -1,6 +1,5 @@
 package co.edu.uco.backendvictus.crosscutting.helpers;
 
-
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -40,7 +39,6 @@ public final class Sanitizer {
                         Collectors.toMap(entry -> sanitize(entry.getKey()), Sanitizer::sanitizeValue,
                                 (existing, replacement) -> replacement, LinkedHashMap::new),
                         Collections::unmodifiableMap));
-                .collect(Collectors.toUnmodifiableMap(entry -> sanitize(entry.getKey()), Sanitizer::sanitizeValue));
     }
 
     private static Object sanitizeValue(final Object value) {
@@ -52,7 +50,6 @@ public final class Sanitizer {
             final Map<String, Object> casted = nested.entrySet().stream()
                     .collect(Collectors.toMap(entry -> Objects.toString(entry.getKey()), Map.Entry::getValue,
                             (existing, replacement) -> replacement, LinkedHashMap::new));
-                    .collect(Collectors.toMap(entry -> Objects.toString(entry.getKey()), entry -> entry.getValue()));
             return sanitizeMetadata(casted);
         }
         return value;

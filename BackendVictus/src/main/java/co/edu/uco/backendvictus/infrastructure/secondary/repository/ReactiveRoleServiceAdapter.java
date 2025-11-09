@@ -22,8 +22,11 @@ public class ReactiveRoleServiceAdapter implements ReactiveRoleService {
 
     @Override
     public Mono<Boolean> hasRole(final UUID userId, final String role) {
-        return databaseClient.sql(
-                "SELECT CASE WHEN COUNT(1) > 0 THEN TRUE ELSE FALSE END as has_role FROM usuario_rol WHERE usuario_id = :userId AND rol = :role")
+        return databaseClient.sql("""
+                        SELECT CASE WHEN COUNT(1) > 0 THEN TRUE ELSE FALSE END AS has_role
+                        FROM usuario_rol
+                        WHERE usuario_id = :userId AND rol = :role
+                        """)
                 .bind("userId", userId)
                 .bind("role", role)
                 .map(row -> row.get("has_role", Boolean.class))

@@ -38,7 +38,6 @@ public class GlobalErrorHandler implements WebExceptionHandler {
         LOGGER.error("Error manejado - status={} traceId={} path={} mensaje={}", status, traceId,
                 exchange.getRequest().getPath(), ex.getMessage(), ex);
 
-
         final Map<String, Object> body = new java.util.LinkedHashMap<>();
         body.put("timestamp", LocalDateTime.now().toString());
         body.put("status", status.value());
@@ -48,15 +47,6 @@ public class GlobalErrorHandler implements WebExceptionHandler {
             body.put("traceId", traceId);
         }
         body.put("path", exchange.getRequest().getPath().value());
-
-        final Map<String, Object> body = Map.of(
-                "timestamp", LocalDateTime.now().toString(),
-                "status", status.value(),
-                "error", status.getReasonPhrase(),
-                "message", ex.getMessage(),
-                "traceId", traceId,
-                "path", exchange.getRequest().getPath().value());
-
 
         exchange.getResponse().setStatusCode(status);
         exchange.getResponse().getHeaders().setContentType(MediaType.APPLICATION_JSON);

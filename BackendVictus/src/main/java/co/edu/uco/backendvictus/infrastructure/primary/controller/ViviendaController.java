@@ -18,7 +18,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ServerWebExchange;
+
 import jakarta.validation.Valid;
+
 import co.edu.uco.backendvictus.application.dto.vivienda.ViviendaCreateRequest;
 import co.edu.uco.backendvictus.application.dto.vivienda.ViviendaResponse;
 import co.edu.uco.backendvictus.application.usecase.vivienda.EliminarViviendaUseCase;
@@ -53,7 +55,6 @@ public class ViviendaController {
     @PostMapping("/viviendas")
     public Mono<ResponseEntity<ViviendaResponse>> crearVivienda(
             @RequestBody final Mono<@Valid ViviendaCreateRequest> requestMono,
-            @Validated @RequestBody final Mono<ViviendaCreateRequest> requestMono,
             final ServerWebExchange exchange) {
         final String traceId = resolveTraceId(exchange);
         LOGGER.debug("Solicitud de creacion de vivienda - traceId={}", traceId);

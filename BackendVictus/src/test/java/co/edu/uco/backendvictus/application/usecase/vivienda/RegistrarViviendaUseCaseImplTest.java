@@ -53,7 +53,7 @@ class RegistrarViviendaUseCaseImplTest {
 
     @Test
     void shouldRegisterViviendaSuccessfully() {
-        final ViviendaCreateRequest request = new ViviendaCreateRequest("A-101", "APARTAMENTO", "ACTIVA",
+        final ViviendaCreateRequest request = new ViviendaCreateRequest("A-101", "APARTAMENTO", "OCUPADA",
                 UUID.randomUUID(), Map.of("torre", "1"));
         final UUID principalId = UUID.randomUUID();
         final Vivienda vivienda = mapper.toDomain(UUID.randomUUID(), request);
@@ -73,7 +73,7 @@ class RegistrarViviendaUseCaseImplTest {
 
     @Test
     void shouldFailWhenUserIsNotAdmin() {
-        final ViviendaCreateRequest request = new ViviendaCreateRequest("A-102", "CASA", "ACTIVA",
+        final ViviendaCreateRequest request = new ViviendaCreateRequest("A-102", "CASA", "NO_OCUPADA",
                 UUID.randomUUID(), null);
         final UUID principalId = UUID.randomUUID();
 

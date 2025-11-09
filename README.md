@@ -391,6 +391,8 @@ eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwMDIwMDAwMC0wMDAwLTAwMDAtMDAwMC0
 
 ### 🧪 Probar creación de vivienda
 
+> Los estados permitidos son `OCUPADA` y `NO_OCUPADA`.
+
 ```bash
 curl -X POST "http://localhost:8080/v1/viviendas" \
   -H "Content-Type: application/json" \

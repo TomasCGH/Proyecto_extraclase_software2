@@ -103,14 +103,6 @@ public class RegistrarViviendaUseCaseImpl implements RegistrarViviendaUseCase {
         if (vivienda.getMetadatos() != null) {
             payload.put("metadatos", vivienda.getMetadatos());
         }
-        final Map<String, Object> payload = Map.of(
-                "id", vivienda.getId().toString(),
-                "numero", vivienda.getNumero(),
-                "tipo", vivienda.getTipo(),
-                "estado", vivienda.getEstado(),
-                "conjuntoId", vivienda.getConjuntoId().toString(),
-                "timestamp", Instant.now().toString(),
-                "metadatos", vivienda.getMetadatos());
 
         return viviendaCachePort.upsert(vivienda)
                 .then(messagePort.publish("vivienda.creada", payload, traceId))
