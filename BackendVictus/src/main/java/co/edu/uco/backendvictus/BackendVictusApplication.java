@@ -1,4 +1,4 @@
-package co.edu.uco.backendvictus;
+package main.java.co.edu.uco.backendvictus;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

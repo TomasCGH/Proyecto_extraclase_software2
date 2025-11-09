@@ -64,7 +64,7 @@ public class GlobalErrorHandler implements WebExceptionHandler {
             return HttpStatus.FORBIDDEN;
         }
         if (ex instanceof ResponseStatusException responseStatusException) {
-            return responseStatusException.getStatusCode();
+            return (HttpStatus) responseStatusException.getStatusCode();
         }
         return HttpStatus.INTERNAL_SERVER_ERROR;
     }

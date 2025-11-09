@@ -1,5 +1,6 @@
 package co.edu.uco.backendvictus.application.usecase.conjunto;
 
+import co.edu.uco.backendvictus.application.usecase.UseCase;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

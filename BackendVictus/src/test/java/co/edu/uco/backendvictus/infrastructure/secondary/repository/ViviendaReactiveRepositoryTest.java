@@ -21,7 +21,7 @@ import reactor.test.StepVerifier;
 class ViviendaReactiveRepositoryTest {
 
     @Autowired
-    private ViviendaReactiveRepository repository;
+    private main.java.co.edu.uco.backendvictus.infrastructure.secondary.repository.ViviendaReactiveRepository repository;
 
     @Autowired
     private DatabaseClient databaseClient;

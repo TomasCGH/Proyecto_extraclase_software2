@@ -1,5 +1,6 @@
 package co.edu.uco.backendvictus.application.usecase.administrador;
 
+import co.edu.uco.backendvictus.application.usecase.UseCase;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
