@@ -1,5 +1,8 @@
 package co.edu.uco.backendvictus.crosscutting.helpers;
 
+
+import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -33,6 +36,10 @@ public final class Sanitizer {
             return null;
         }
         return metadatos.entrySet().stream()
+                .collect(Collectors.collectingAndThen(
+                        Collectors.toMap(entry -> sanitize(entry.getKey()), Sanitizer::sanitizeValue,
+                                (existing, replacement) -> replacement, LinkedHashMap::new),
+                        Collections::unmodifiableMap));
                 .collect(Collectors.toUnmodifiableMap(entry -> sanitize(entry.getKey()), Sanitizer::sanitizeValue));
     }
 
@@ -43,6 +50,8 @@ public final class Sanitizer {
         if (value instanceof Map<?, ?> nested) {
             @SuppressWarnings("unchecked")
             final Map<String, Object> casted = nested.entrySet().stream()
+                    .collect(Collectors.toMap(entry -> Objects.toString(entry.getKey()), Map.Entry::getValue,
+                            (existing, replacement) -> replacement, LinkedHashMap::new));
                     .collect(Collectors.toMap(entry -> Objects.toString(entry.getKey()), entry -> entry.getValue()));
             return sanitizeMetadata(casted);
         }

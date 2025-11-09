@@ -1,6 +1,11 @@
 package co.edu.uco.backendvictus.domain.model;
 
 import java.util.Collections;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Optional;
+import java.util.Set;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,6 +22,8 @@ public final class Vivienda {
     private final String numero;
     private final String tipo;
     private final String estado;
+
+    private static final Set<String> ESTADOS_VALIDOS = Set.of("OCUPADA", "NO_OCUPADA");
     private final UUID conjuntoId;
     private final Map<String, Object> metadatos;
 
@@ -38,10 +45,19 @@ public final class Vivienda {
         final UUID validatedConjuntoId = Objects.requireNonNull(conjuntoId, "El identificador del conjunto es obligatorio");
         final String validatedNumero = requireText(numero, "El numero de la vivienda es obligatorio");
         final String validatedTipo = requireText(tipo, "El tipo de la vivienda es obligatorio");
+        final String validatedEstado = validateEstado(estado);
         final String validatedEstado = requireText(estado, "El estado de la vivienda es obligatorio");
-
         return new Vivienda(validatedId, validatedNumero, validatedTipo, validatedEstado, validatedConjuntoId,
                 metadatos);
+    }
+
+    private static String validateEstado(final String estado) {
+        final String normalizedEstado = requireText(estado, "El estado de la vivienda es obligatorio")
+                .toUpperCase(Locale.ROOT);
+        if (!ESTADOS_VALIDOS.contains(normalizedEstado)) {
+            throw new DomainException("El estado de la vivienda debe ser OCUPADA o NO_OCUPADA");
+        }
+        return normalizedEstado;
     }
 
     private static String requireText(final String value, final String message) {

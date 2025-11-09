@@ -399,7 +399,7 @@ curl -X POST "http://localhost:8080/v1/viviendas" \
   -d '{
     "numero": "A-203",
     "tipo": "APARTAMENTO",
-    "estado": "ACTIVA",
+    "estado": "NO_OCUPADA",
     "conjuntoId": "c8a8e7c1-2d53-4f0a-8b9e-3b9b6c9b2b77",
     "metadatos": {"torre": "3", "piso": 2}
   }'

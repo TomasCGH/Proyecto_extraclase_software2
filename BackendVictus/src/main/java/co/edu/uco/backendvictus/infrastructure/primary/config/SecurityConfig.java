@@ -9,6 +9,7 @@ import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.authorization.AuthorizationDecision;
 import org.springframework.security.authorization.ReactiveAuthorizationManager;
 import org.springframework.security.config.annotation.method.configuration.EnableReactiveMethodSecurity;
+import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.jwt.Jwt;
@@ -20,6 +21,7 @@ import co.edu.uco.backendvictus.domain.port.ReactiveRoleService;
 import reactor.core.publisher.Mono;
 
 @Configuration
+@EnableWebFluxSecurity
 @EnableReactiveMethodSecurity
 public class SecurityConfig {
 
