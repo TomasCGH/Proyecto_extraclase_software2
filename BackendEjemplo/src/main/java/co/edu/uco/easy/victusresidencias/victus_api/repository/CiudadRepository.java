@@ -1,0 +1,12 @@
+package co.edu.uco.easy.victusresidencias.victus_api.repository;
+
+import co.edu.uco.easy.victusresidencias.victus_api.entity.CiudadEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import java.util.UUID;
+
+@Repository
+public interface CiudadRepository extends JpaRepository<CiudadEntity, UUID> {
+    boolean existsByNombre(String nombre);
+    boolean existsByNombreAndDepartamentoId(String nombre, UUID departamentoId);
+}

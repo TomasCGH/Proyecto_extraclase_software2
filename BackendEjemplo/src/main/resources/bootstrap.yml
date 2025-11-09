@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: victusR
+
+  cloud:
+    vault:
+      host: vault-postgres-project-production.up.railway.app
+      port: 443
+      scheme: https
+      authentication: TOKEN
+      token: ${VAULT_TOKEN}
+      kv:
+        enabled: true
+        backend: secret
+        application-name: application
+        default-context: application
+        fail-fast: true
+
+
